@@ -8,6 +8,10 @@ router.get('/about', function (req, res, next) {
     res.render('pages/about/index')
      next();
  });
+ router.get('/payment', function (req, res, next) {
+    res.render('pages/upcomming/index')
+     next();
+ });
 router.get('/contact', function (req, res, next) {
     res.render('pages/contact/index')
      next();
