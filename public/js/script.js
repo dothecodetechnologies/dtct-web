@@ -14,13 +14,13 @@ $(window).on("scroll", () => {
   }
 });
 
-$(".page-header .nav-link, .navbar-brand").on("click", function (e) {
-  e.preventDefault();
-  // const href = $(this).attr("href");
-  // $("html, body").animate({
-  //   scrollTop: $(href).offset().top - 71
-  // }, 600);
-});
+// $(".page-header .nav-link, .navbar-brand").on("click", function (e) {
+//   e.preventDefault();
+// const href = $(this).attr("href");
+// $("html, body").animate({
+//   scrollTop: $(href).offset().top - 71
+// }, 600);
+// });
 var welcomeText = ['Welcome to DoTheCode Digital', 'Welcome to Digital India', 'Welcome to DoTheCode Tech', 'Welcome to expand the techonology'],
   part,
   i = 0,
@@ -153,7 +153,15 @@ $(document).ready(function () {
   }];
   var appendTopNewAidCourse = '';
   topCourseAid.forEach((data) => {
-    appendTopNewAidCourse += data.isNew ? `<div class='marquee-tag'>${data.courseShortName} <img class='set-new-tag' src='/assests/new_red.gif'></div>` : `<div class='marquee-tag'>${data.courseShortName}</div>`
+    appendTopNewAidCourse += data.isNew ? `<div class='marquee-tag'>${data.courseShortName} <img class='set-new-tag' src='/assests/new.gif'></div>` : `<div class='marquee-tag'>${data.courseShortName}</div>`
   })
-  $('#course-marquee-add').append(appendTopNewAidCourse)
+  $('#course-marquee-add').append(appendTopNewAidCourse);
+  //add other location
+  $('#otherLocation').hide();
+  $("#location").on('change', function () {
+    let currValue = this.value;
+    currValue == 'others' ? $('#otherLocation').show() : $('#otherLocation').hide();
+  
+  })
+  // $('#regis-popup').modal('show')
 })

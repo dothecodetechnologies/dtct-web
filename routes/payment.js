@@ -1,6 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const {initPayment, responsePayment} = require("../paytm/services/index");
+const { initPayment, responsePayment } = require("../paytm/services/index");
+router.get("/", (req, res) => {
+    res.render("payment/index", {payForName : 'SBY Coaching Classes'});
+})
 router.get("/paywithpaytm", (req, res) => {
     initPayment(req.query.amount).then(
         success => {
@@ -18,11 +21,11 @@ router.get("/paywithpaytm", (req, res) => {
 router.post("/paywithpaytmresponse", (req, res) => {
     responsePayment(req.body).then(
         success => {
-            res.render("payment/response.ejs", {resultData: "true", responseData: success});
+            res.render("payment/response.ejs", { resultData: "true", responseData: success });
         },
         error => {
             res.send(error);
         }
     );
 });
-module.exports=router
+module.exports = router

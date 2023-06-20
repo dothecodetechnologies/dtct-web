@@ -1,0 +1,31 @@
+<%- include('../../header/header'); %>
+<section class="contact-section form-style container" id="contact-section-ID">
+    <div class="text-center">
+<h5>Opennings available!</h5>
+<p style="font-size: 12px;">Computer Teacher / Lab Teacher</p>
+    </div>
+    <form>
+        <div class="form-group col-12 col-sm-6 col-lg-6">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name">
+        </div>
+        <div class="form-group col-12 col-sm-6 col-lg-6">
+            <label for="">Email</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+          </div>
+          <div class="form-group col-12 col-sm-6 col-lg-6">
+            <label for="name">Mobile</label>
+            <input type="tel" class="form-control" id="mobile" aria-describedby="mobileHelp" placeholder="Enter mobile">
+          </div>
+          <div class="form-group col-12 col-sm-6 col-lg-6">
+            <label for="name">Note</label>
+            <textarea type="text" class="form-control" id="note" aria-describedby="noteHelp" placeholder="Enter note" rows="4"> </textarea>
+          </div>
+          <div class="form-group col-12 col-sm-6 col-lg-6">
+            <label for="exampleFormControlFile1">Resume</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+          </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</section>
+<%- include('../../footer/footer'); %>
