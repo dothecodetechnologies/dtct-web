@@ -1,5 +1,9 @@
 /* RESET RULES & HELPER CLASSES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+body
+{
+  font-family: 'IBM Plex Sans', sans-serif;
+}
 :root {
   --lightblue: #f6f9fc;
   --red:#cc0892;
@@ -354,4 +358,10 @@ a:hover {
 {
   display: flex;
   margin-bottom: 14px;
+}
+@media only screen and (max-width: 600px) {
+.course1
+{
+font-size: 9px;
+}
 }
