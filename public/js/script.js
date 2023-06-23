@@ -156,6 +156,21 @@ $(document).ready(function () {
     appendTopNewAidCourse += data.isNew ? `<div class='marquee-tag'>${data.courseShortName} <img class='set-new-tag' src='/assests/new.gif'></div>` : `<div class='marquee-tag'>${data.courseShortName}</div>`
   })
   $('#course-marquee-add').append(appendTopNewAidCourse);
+  let slotJSON =[
+    {id :'slot1', time :'06:00 AM to 08:00 AM', shift:'Morning'},
+    {id :'slot2', time:'07:00 AM to 09:00 AM', shift:'Morning'},
+    {id :'slot3', time:'08:00 AM to 10:00 AM', shift:'Morning'},
+    {id :'slot4', time:'09:00 AM to 11:00 AM',shift:'Morning'},
+    {id :'slot5', time:'10:00 AM to 12:00 PM',shift:'Noon'},
+    {id :'slot6', time:'01:00 PM to 03:00 PM', shift:'Noon'},
+    {id :'slot7', time:'02:00 PM to 04:00 PM',shift:'Evening'},
+    {id :'slot', time:'03:00 PM to 05:00 PM', shift:'Evening'}
+  ]
+  var appendSlotAid = '';
+  slotJSON.forEach((data) => {
+    appendSlotAid += `<div class='marquee-tag'>${data.time}</div>`
+  })
+  $('#slot-marquee-add').append(appendSlotAid);
   //add other location
   $('#otherLocation').hide();
   $("#location").on('change', function () {

@@ -1,12 +1,14 @@
 <%- include('../../header/header'); %>
-    <section class="registration container form-style" id="registration-section-ID">
+    <section class="registration form-style" id="registration-section-ID">
+        <%- include('../../marketing/slot/index'); %>
         <div class="text-center">
-            <h5>Registration Request ?</h5>
+            <h5>Registration Request <i class="fa fa-check" aria-hidden="true"></i></h5>
         </div>
-        <form>
+        <form method="post" action="/registration">
             <div class="form-group col-12 col-sm-6 col-lg-6">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" name="name" id="name" aria-describedby="nameHelp" placeholder="Enter name">
+                <input type="text" class="form-control" name="name" id="name" aria-describedby="nameHelp"
+                    placeholder="Enter name">
             </div>
             <div class="form-group col-12 col-sm-6 col-lg-6">
                 <label for="email">Email</label>
@@ -20,74 +22,66 @@
             </div>
             <div class="form-group col-12 col-sm-6 col-lg-6">
                 <label for="course">Computer Course</label>
-                <select class="form-control" id="c_course">
+                <select class="form-control" id="c_course" name="c_course">
+                    <option disabled selected>Please select the compouter course</option>
                     <option>BCC</option>
                     <option>CCC</option>
                     <option>DCA</option>
                     <option>DCA</option>
                     <option>ADCA</option>
                     <option>Tally</option>
-                  </select>
+                    <option>None</option>
+                </select>
             </div>
             <div class="form-group col-12 col-sm-6 col-lg-6">
                 <label for="course">Software Course</label>
-                <select class="form-control" id="s_course">
-                    <option>None</option>
-                    <option>C</option>
+                <select class="form-control" id="s_course" name="s_course">
+                    <option disabled selected>Please select the software course</option>
+                    <option>C langaue</option>
                     <option>JavaScript</option>
                     <option>Java</option>
                     <option>PHP</option>
                     <option>Nodejs</option>
                     <option>Web Development</option>
-                  </select>
+                    <option>None</option>
+                </select>
             </div>
             <div class="form-group col-12 col-sm-6 col-lg-6">
                 <label for="name">Location</label>
-                <select class="form-control" id="location">
-                    <option value="jamuaon">Jamuaon</option>
-                    <option value="">Khandawa</option>
-                    <option>Nadpalia</option>
-                    <option>Thakurahi</option>
-                    <option>Charaua</option>
-                    <option value="">Chhintkia</option>
-                    <option>Suppapali</option>
-                    <option>Gauapar</option>
-                    <option>Tirnai</option>
-                    <option>Rampur</option>
-                    <option>Malipur</option>
-                    <option>Naurangia</option>
-                    <option>Hapsapur</option>
-                    <option>Kaithi</option>
-                    <option>Tendua</option>
-                    <option>Saddopur</option>
-                    <option>Bhuwarakhut</option>
-                    <option>Karni</option>
-                    <option>Holpur</option>
-                    <option>Telma</option>
-                    <option>Jaldipur</option>
-                    <option>Babhnauli</option>
-                    <option value="others">Others</option>
-                  </select>
+                <select class="form-control" id="location" name="location">
+                    <option value="" disabled selected>Please select the location</option>
+                    <% for (var i=0; i < locationList.length; i++) { %>
+                        <option value="<%=locationList[i].id%>">
+                            <%=locationList[i].name%>
+                        </option>
+                        <% } %>
+                        <option value="others">Others</option>
+                </select>
             </div>
             <div class="form-group col-12 col-sm-6 col-lg-6" id="otherLocation">
                 <label for="name">Please enter location name</label>
-                <input type="text" class="form-control" id="slot" name="slot" aria-describedby="nameHelp" placeholder="Enter other location">
+                <input type="text" class="form-control" id="location" name="location" aria-describedby="nameHelp"
+                    placeholder="Enter other location">
             </div>
             <div class="form-group col-12 col-sm-6 col-lg-6">
                 <label for="name">Slot</label>
-                <select name="" class="form-control" id="slot">
-                    <option>08:00 AM to 10:00 AM</option>
-                    <option>09:00 AM to 11:00 AM</option>
-                    <option>10:00 AM to 12:00 PM</option>
-                    <option>01:00 PM to 03:00 PM</option>
-                    <option>02:00 PM to 04:00 PM</option>
-                    <option>03:00 PM to 05:00 PM</option>
+                <select name="" class="form-control" id="slot" name="slot">
+                    <option disabled selected>Please select slot</option>
+                    <option>Slot1 (06:00 AM to 08:00 AM) Morning</option>
+                    <option>Slot2 (07:00 AM to 09:00 AM) Morning</option>
+                    <option>Slot3 (08:00 AM to 10:00 AM) Morning</option>
+                    <option>Slot4 (09:00 AM to 11:00 AM) Morning</option>
+                    <option>Slot5 (10:00 AM to 12:00 PM) Noon</option>
+                    <option>Slot6 (01:00 PM to 03:00 PM) Noon</option>
+                    <option>Slot7 (02:00 PM to 04:00 PM) Evening</option>
+                    <option>Slot8 (03:00 PM to 05:00 PM) Evening</option>
 
                 </select>
             </div>
             <div class="form-group col-12 col-sm-6 col-lg-6">
                 <label for="name">Adhar No.</label>
-                <input type="text" class="form-control" id="adharNo" name="adharNo" aria-describedby="nameHelp" placeholder="Enter name">
+                <input type="text" class="form-control" id="adharNo" name="adharNo" aria-describedby="nameHelp"
+                    placeholder="Enter name">
             </div>
             <button type="submit" class="btn btn-primary">Registration</button>
         </form>
