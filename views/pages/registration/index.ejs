@@ -1,10 +1,9 @@
 <%- include('../../header/header'); %>
     <section class="registration form-style" id="registration-section-ID">
-        <%- include('../../marketing/slot/index'); %>
         <div class="text-center">
             <h5>Registration Request <i class="fa fa-check" aria-hidden="true"></i></h5>
         </div>
-        <form method="post" action="/registration">
+        <form method="post" action="registration" id="registration">
             <div class="form-group col-12 col-sm-6 col-lg-6">
                 <label for="name">Name</label>
                 <input type="text" class="form-control" name="name" id="name" aria-describedby="nameHelp"
@@ -83,7 +82,8 @@
                 <input type="text" class="form-control" id="adharNo" name="adharNo" aria-describedby="nameHelp"
                     placeholder="Enter name">
             </div>
-            <button type="submit" class="btn btn-primary">Registration</button>
+            <button class="btn btn-primary">Registration</button>
         </form>
     </section>
+    <%- include('../../marketing/slot/index'); %>
     <%- include('../../footer/footer'); %>

@@ -179,4 +179,14 @@ $(document).ready(function () {
   
   })
   // $('#regis-popup').modal('show')
+
+
+  // registration ajax
+  $('#registration').on('submit', function()
+  {
+    let url = $("#registration").attr("action");
+    $.ajax({url: url, success: function(data){
+     console.log(data);
+    }});
+  })
 })

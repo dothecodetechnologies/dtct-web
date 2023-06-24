@@ -39,7 +39,10 @@ let locationList = [
     { id: 'MDR', name: 'Makhdunpur' },
     { id: 'MSR', name: 'Masuria' },
     { id: 'NNR', name: 'Nanoura' },
-    { id: 'PCH', name: 'Pal Chandraha' }
+    { id: 'PCH', name: 'Pal Chandraha' },
+    { id: 'IPR', name: 'Idlispur' },
+    { id: 'RBR', name: 'Rupwar Bhagwanpur' },
+    { id: 'LHN', name: 'Lahsani' }
 ];
 
 locationList.sort(function (a, b) {
