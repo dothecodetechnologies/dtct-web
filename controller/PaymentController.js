@@ -1,4 +1,5 @@
-const paymentIndex = ((req, res) => {
-    res.render("payment/index" ,{payForName  : 'SBY Coaching Classes'})
+const paymentIndex = ((req, res,next) => {
+    res.render('pages/upcomming/index')
+    next();
 })
 module.exports = { paymentIndex }
