@@ -184,9 +184,9 @@ $(document).ready(function () {
   // registration ajax
   $('#registration').on('submit', function()
   {
-    let url = $("#registration").attr("action");
-    $.ajax({url: url, success: function(data){
-     console.log(data);
-    }});
+    // let url = $("#registration").attr("action");
+    // $.ajax({url: url, success: function(data){
+    // //  console.log(data);
+    // }});
   })
 })

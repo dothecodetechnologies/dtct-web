@@ -5,7 +5,7 @@ const cors = require('cors');
 const app = express();
 require("dotenv").config();
 app.use(cors());
-require('./database/mysql/connection');
+require('./database/mongodb/connection');
 const port = process.env.PORT || 3002;
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));

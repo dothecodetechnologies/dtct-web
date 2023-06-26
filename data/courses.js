@@ -1,4 +1,22 @@
-let courses =[{
-    id:'DTCT-C201',
-    name:''
-}]
+let courses = [
+    { id: 'DTCT-C201', name: 'Basic Computer Course', shortName: 'BCC' },
+    { id: 'DTCT-C202', name: 'Computer Common Course', shortName: 'CCC' },
+    { id: 'DTCT-C203', name: 'Diploma In Computer Applications', shortName: 'DCA' },
+    { id: 'DTCT-C204', name: 'Advance Diploma In Computer Applications', shortName: 'ADCA' },
+    { id: 'DTCT-C205', name: 'Honours Diploma In Computer Applications', shortName: 'HDCA' },
+    { id: 'DTCT-C206', name: 'Honours Advance Diploma In Computer Applications', shortName: 'HDCA' },
+    { id: 'DTCT-C207', name: 'Diploma In Office Management', shortName: 'DOM' },
+    { id: 'DTCT-C208', name: 'Diploma In Website Designing', shortName: 'DWD' },
+    { id: 'DTCT-C209', name: 'Diploma In Programming Applications', shortName: 'DPA' },
+    { id: 'DTCT-C210', name: 'Diploma in Computer Networking', shortName: 'DCN' },
+    { id: 'DTCT-C211', name: 'Diploma in Computer Hardware', shortName: 'DCH' },
+    { id: 'DTCT-C212', name: 'Diploma In Computer Applications & Training', shortName: 'DCAT' },
+    { id: 'DTCT-C213', name: 'Master Diploma In Computer Applications & Training', shortName: 'MDCAT' },
+    { id: 'DTCT-C214', name: 'Advance Diploma In Computer Hardware & Networking', shortName: 'ADCHN' },
+    { id: 'DTCT-C215', name: 'Advance Diploma in Inforomation Technology', shortName: 'ADIT' },
+    { id: 'DTCT-C216', name: 'Honours Diploma in Inforomation Technology ', shortName: 'HDIT' },
+    { id: 'DTCT-C217', name: 'Honours Diploma In Advanced Programming', shortName: 'HDAP' },
+    { id: 'DTCT-C218', name: 'Diploma In Computer Applications & Designing', shortName: 'DCAD' },
+    { id: 'DTCT-C219', name: 'Diploma In Computer Applications & Accounting', shortName: 'DCAA' },
+    { id: 'DTCT-C220', name: 'Diploma In Financial Accounting ', shortName: 'DFA' }];
+module.exports = courses;

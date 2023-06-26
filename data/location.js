@@ -32,7 +32,7 @@ let locationList = [
     { id: 'PSA', name: 'Parsia' },
     { id: 'BKT', name: 'Bhuara Khunt' },
     { id: 'BJP', name: 'Bhojupur' },
-    { id: 'BDP', name: 'Bihraharpur' },
+    { id: 'BPR', name: 'Bihraharpur' },
     { id: 'BSP', name: 'Bishunpura' },
     { id: 'CTN', name: 'Chitauni' },
     { id: 'KML', name: 'Kamrouli' },
