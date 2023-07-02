@@ -364,6 +364,9 @@ a:hover {
 {
 font-size: 9px;
 }
+.area-serve-tag{
+  width: 165px !important;
+  }
 }
 .visit-container
 {
@@ -385,6 +388,7 @@ margin: 0 auto;
     align-items: center;
     color: var(--white);
 }
+
 /* .area-serve-tag:hover
 {
   background: rgba(255,255,255,0.5);
