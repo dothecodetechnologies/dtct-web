@@ -6,11 +6,21 @@ const softwareCourses = require('../data/software-courses');
 let visitSiteCount = 10;
 
 let indexPage = (req, res, next) => {
-    res.render('index', { visitSiteCount: visitSiteCount })
+    res.render('index', { visitSiteCount: visitSiteCount, locationList: locationList })
     next();
 }
 let aboutPage = (req, res, next) => {
     res.render('pages/about/index', { visitSiteCount: visitSiteCount })
+    next();
+}
+let filterData = (cid) => {
+    return courses.find(data => data.id.toLowerCase() == cid)
+}
+
+let coursePage = (req, res, next) => {
+    res.render('courses/c_template.ejs', { visitSiteCount: visitSiteCount })
+    console.log(req.params.id);
+    console.log(filterData(req.params.id));
     next();
 }
 let studentRegistrationFormShow = (req, res, next) => {
@@ -54,4 +64,4 @@ let careerPage = (req, res, next) => {
 }
 
 
-module.exports = { indexPage, aboutPage, contactPage, studentRegistrationFormShow, studentRegistrationPost, careerPage, visitSiteCount };
+module.exports = { indexPage, aboutPage, contactPage, studentRegistrationFormShow, studentRegistrationPost, careerPage, coursePage };

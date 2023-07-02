@@ -1,0 +1,12 @@
+<section class="serve-area">
+    <div class="text-purple text-center">
+        <h4>Serve Area <span style="font-size: 12px;">(We are covering area total  <%= locationList.length %>+)</span></h4>
+        <div class="area-serve-tag-container">
+            <% for (var i=0; i < locationList.length; i++) { %>
+            <div class="area-serve-tag">
+                <%=locationList[i].name%> (<%= locationList[i].id%>)
+            </div>
+            <% } %>
+        </div>
+    </div>
+</section>

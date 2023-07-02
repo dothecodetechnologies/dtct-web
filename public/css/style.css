@@ -29,7 +29,7 @@ a:hover {
   background-color: #007bff;
 }
 
-.text-red {
+.text-purple {
   color: #271f61;
 }
 
@@ -370,3 +370,24 @@ font-size: 9px;
 text-align: center;
 margin: 0 auto;
 }
+.area-serve-tag-container{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.area-serve-tag{
+  width: 200px;
+    margin: 10px 0.5em;
+    padding: 0.5em;
+    background: linear-gradient(-135deg, #008ed9, #8b00db);
+    align-items: center;
+    color: var(--white);
+}
+/* .area-serve-tag:hover
+{
+  background: rgba(255,255,255,0.5);
+ 
+  cursor: pointer;
+} */
