@@ -6,7 +6,6 @@ const { sbyccCourses,sbyccClasses } = require('../data/sbycc_courses');
 let visitSiteCount = 10;
 
 let indexPage = (req, res, next) => {
-    console.log(req.body);
     res.render('index', { visitSiteCount: visitSiteCount, locationList: locationList })
     next();
 }
