@@ -1,0 +1,88 @@
+<%- include('../../header/header'); %>
+    <section class="registration form-style" id="registration-section-ID">
+        <div class="text-center">
+            <h5>Registration Request (DTCT/<%=year%>)<i class="fa fa-check" aria-hidden="true"></i></h5>
+           <span class="text-purple" style="font-size: 13px;">DoTheCode Technologies Pvt. Ltd. , Jamuaon, Ballia, 221718</span>
+        </div>
+        <form method="post" action="registration" id="registration">
+            <div class="form-group col-12 col-sm-6 col-lg-6">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" name="name" id="name" aria-describedby="nameHelp"
+                    placeholder="Enter name">
+            </div>
+            <div class="form-group col-12 col-sm-6 col-lg-6">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
+                    placeholder="Enter email">
+            </div>
+            <div class="form-group col-12 col-sm-6 col-lg-6">
+                <label for="name">Mobile</label>
+                <input type="tel" class="form-control" maxlength="10" id="mobile" name="mobile" aria-describedby="mobileHelp"
+                    placeholder="Enter mobile">
+            </div>
+            <div class="form-group col-12 col-sm-6 col-lg-6">
+                <label for="course">Computer Course</label>
+                <select class="form-control" id="c_course" name="c_course">
+                    <option disabled selected>Please select the compouter course</option>
+                    <% for (var i=0; i < courses.length; i++) { %>
+                        <option value="<%=courses[i].shortName%>">
+                            <%=courses[i].id%> - <%=courses[i].name%> (<%=courses[i].shortName%>)
+                        </option>
+                        <% } %>
+                    <option>None</option>
+                </select>
+            </div>
+            <div class="form-group col-12 col-sm-6 col-lg-6">
+                <label for="course">Software Course</label>
+                <select class="form-control" id="s_course" name="s_course">
+                    <option disabled selected>Please select the software course</option>
+                    <% for (var i=0; i < softwareCourses.length; i++) { %>
+                        <option value="<%=softwareCourses[i].shortName%>">
+                            <%=softwareCourses[i].id%> - <%=softwareCourses[i].name%> (<%=softwareCourses[i].shortName%>)
+                        </option>
+                        <% } %>
+                    <option>None</option>
+                </select>
+            </div>
+            <div class="form-group col-12 col-sm-6 col-lg-6">
+                <label for="name">Location</label>
+                <select class="form-control" id="location" name="location">
+                    <option value="" disabled selected>Please select the location</option>
+                    <% for (var i=0; i < locationList.length; i++) { %>
+                        <option value="<%=locationList[i].name%> - <%=locationList[i].id%>">
+                            <%=locationList[i].name%> - <%=locationList[i].id%>
+                        </option>
+                        <% } %>
+                        <option value="others">Others</option>
+                </select>
+            </div>
+            <div class="form-group col-12 col-sm-6 col-lg-6" id="otherLocation">
+                <label for="name">Please enter location name</label>
+                <input type="text" class="form-control" id="location2" name="location2" aria-describedby="nameHelp"
+                    placeholder="Enter other location">
+            </div>
+            <div class="form-group col-12 col-sm-6 col-lg-6">
+                <label for="name">Slot</label>
+                <select name="" class="form-control" id="slot" name="slot">
+                    <option disabled selected>Please select slot</option>
+                    <option>Slot1 (06:00 AM to 08:00 AM) Morning</option>
+                    <option>Slot2 (07:00 AM to 09:00 AM) Morning</option>
+                    <option>Slot3 (08:00 AM to 10:00 AM) Morning</option>
+                    <option>Slot4 (09:00 AM to 11:00 AM) Morning</option>
+                    <option>Slot5 (10:00 AM to 12:00 PM) Noon</option>
+                    <option>Slot6 (01:00 PM to 03:00 PM) Noon</option>
+                    <option>Slot7 (02:00 PM to 04:00 PM) Evening</option>
+                    <option>Slot8 (03:00 PM to 05:00 PM) Evening</option>
+
+                </select>
+            </div>
+            <div class="form-group col-12 col-sm-6 col-lg-6">
+                <label for="name">Adhar No.</label>
+                <input type="text" class="form-control" id="adhar" name="adhar" aria-describedby="nameHelp"
+                    placeholder="Enter name">
+            </div>
+            <button class="btn btn-primary" type="submit">Registration</button>
+        </form>
+    </section>
+    <%- include('../../marketing/slot/index'); %>
+    <%- include('../../footer/footer'); %>

@@ -1,16 +1,17 @@
-const { reset } = require('nodemon');
 let locationList = require('../data/location');
-const courses = require('../data/courses');
+const courses = require('../data/computer_courses');
 const studentModel = require('../models/studentRegSchema');
 const softwareCourses = require('../data/software-courses');
+const { sbyccCourses,sbyccClasses } = require('../data/sbycc_courses');
 let visitSiteCount = 10;
 
 let indexPage = (req, res, next) => {
+    console.log(req.body);
     res.render('index', { visitSiteCount: visitSiteCount, locationList: locationList })
     next();
 }
 let aboutPage = (req, res, next) => {
-    res.render('pages/about/index', { visitSiteCount: visitSiteCount })
+    res.render('pages/about/index', { visitSiteCount: visitSiteCount, locationList: locationList })
     next();
 }
 let filterData = (cid) => {
@@ -23,8 +24,17 @@ let coursePage = (req, res, next) => {
     console.log(filterData(req.params.id));
     next();
 }
-let studentRegistrationFormShow = (req, res, next) => {
-    res.render('pages/registration/index', { locationList: locationList, visitSiteCount: visitSiteCount, courses: courses, softwareCourses: softwareCourses })
+let currentYear = new Date().getFullYear();
+let registrationStart = (req, res, next) => {
+    res.render('pages/registration/index', { locationList: locationList, visitSiteCount: visitSiteCount, courses: courses, softwareCourses: softwareCourses, year: currentYear })
+    next();
+}
+let studentSBYCCRegistration = (req, res, next) => {
+    res.render('pages/registration/sbycc', { locationList: locationList, visitSiteCount: visitSiteCount, courses: sbyccCourses, classes: sbyccClasses, year: currentYear })
+    next();
+};
+let studentDTCTRegistration = (req, res, next) => {
+    res.render('pages/registration/dtct', { locationList: locationList, visitSiteCount: visitSiteCount, courses: courses, softwareCourses: softwareCourses, year: currentYear })
     next();
 };
 let studentRegistrationPost = (req, res, next) => {
@@ -64,4 +74,4 @@ let careerPage = (req, res, next) => {
 }
 
 
-module.exports = { indexPage, aboutPage, contactPage, studentRegistrationFormShow, studentRegistrationPost, careerPage, coursePage };
+module.exports = { indexPage, aboutPage, contactPage, registrationStart, studentSBYCCRegistration, studentDTCTRegistration, studentRegistrationPost, careerPage, coursePage };

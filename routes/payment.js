@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const { initPayment, responsePayment } = require("../paytm/services/index");
+const PaymentController = require('../controller/PaymentController');
+router.get('/', PaymentController.paymentIndex);
 router.get("/", (req, res) => {
     res.render("payment/index", {payForName : 'SBY Coaching Classes'});
 })

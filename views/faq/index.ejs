@@ -1,0 +1,105 @@
+<style>
+    .content {
+        background: linear-gradient(-135deg, #008ed9, #8b00db);
+        border-radius: 3px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075), 0 2px 4px rgba(0, 0, 0, 0.0375);
+        padding: 30px;
+    }
+
+    .panel-group {
+        margin-bottom: 0;
+    }
+
+    .panel-group .panel {
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .panel-group .panel .panel-heading {
+        padding: 0;
+    }
+
+    .panel-group .panel .panel-heading h4 a {
+        background: #f8f8f8;
+        display: block;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 15px;
+        text-decoration: none;
+        display: flex;
+        justify-content: space-between;
+        transition: 0.15s all ease-in-out;
+    }
+
+    .panel-group .panel .panel-heading h4 a:hover,
+    .panel-group .panel .panel-heading h4 a:not(.collapsed) {
+        background: #fff;
+        transition: 0.15s all ease-in-out;
+    }
+
+    .panel-group .panel .panel-heading h4 a:not(.collapsed) i:before {
+        content: "\f068";
+    }
+
+    .panel-group .panel .panel-heading h4 a i {
+        color: #999;
+    }
+
+    .panel-group .panel .panel-body {
+        padding-top: 0;
+        color: #fff;
+    }
+
+    .panel-group .panel .panel-heading+.panel-collapse>.list-group,
+    .panel-group .panel .panel-heading+.panel-collapse>.panel-body {
+        border-top: none;
+    }
+
+    .panel-group .panel+.panel {
+        border-top: none;
+        margin-top: 0;
+    }
+</style>
+<div class="container">
+    <div class="text-purple text-center"><h4>FAQ</h4></div>
+    <div class="content mb-5">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="headingOne" role="tab">
+                    <h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion"
+                            href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">How do I login to the computer?<i
+                                class="pull-right fa fa-plus"></i></a></h4>
+                </div>
+                <div class="panel-collapse collapse in" id="collapseOne" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        <p>Username and password. Former faculty, staff, alumni, and retirees will not be able to login and use our computers. If you have problems with your login or do not have a UH username, please see a lab monitor for assistance. If you are having problems with your VIA login and password, please contact your sponsor.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" id="headingTwo" role="tab">
+                    <h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse"
+                            data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                            aria-controls="collapseTwo">Where should I save my files?<i class="pull-right fa fa-plus"></i></a></h4>
+                </div>
+                <div class="panel-collapse collapse" id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                        <p>It is recommended that you save all data to your own personal media (USB drive, CD-RW/DVD-RW, etc.) as this gives you the best protection and security against power outages and crashes. We do not recommend saving any data to the hard drive of the computer you are using as those files are removed upon logoff/restart.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" id="headingThree" role="tab">
+                    <h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse"
+                            data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                            aria-controls="collapseThree">Can I install software/hardware on computers in the labs?<i class="pull-right fa fa-plus"></i></a></h4>
+                </div>
+                <div class="panel-collapse collapse" id="collapseThree" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                        <p>You may use thumb drives, and other external storage devices. Feel free to ask an on-duty lab monitor for assistance with installation, if needed. Software installations require prior approval. You will need to email ITS Lab one (1) week in advance. We will then notify you with what will happen in regard to the software. Any software under consideration must have explicit licensing which allows installation in a university computer lab.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -13,9 +13,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // route index
 const indexRouter = require('./routes/index');
-// const paymentRouter = require('./routes/payment');
+const paymentRouter = require('./routes/payment');
 app.use('/', indexRouter);
-// app.use('/payment', paymentRouter);
+app.use('/payment', paymentRouter);
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
